@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Men haqimda</title>
+	<style>
+		body{
+			background-color: lightgoldenrodyellow;
+			text-align: center;
+			font-family: Algerian;
+		}
+		img{
+			width: 200px;
+			border-radius: 20px;
+		}
+		button{
+			padding: 10px 20px;
+			background-color: blueviolet;
+			color: ghostwhite;
+			border:none;
+			cursor: pointer;
+		}
+		button:hover{
+			background-color: indianred;
+		}
+		header{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: darkblue;
+			color: floralwhite;
+			padding: 15px;
+		}
+		nav a{
+			margin: 10px;
+			text-decoration: none;
+			color: navajowhite;
+		}
+		nav a{
+			color: yellowgreen;
+		}
+		section{
+			margin: 20px;
+		}
+		.box{
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			justify-content: center;
+			box-shadow: 0 0 20px slategray;
+		}
+		footer{
+			background-color: black;
+			color: antiquewhite;
+			padding: 10px;
+		}
+		.cards{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			justify-content: center;
+			margin-top: 20px;
+		}
+		@media(max-width: 600px){
+			header{
+				flex-direction: column;
+				text-align: center;
+			}
+			.box{
+				flex-direction: column;
+			}
+			.cards{
+				flex-direction: column;
+				align-items: center;
+			}
+		}   
+		.card{
+			background-color: antiquewhite;
+			padding: 20px;
+			width: 200px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px lightslategray;
+			text-align: center;
+		}
+		.card button{
+			margin-top: 10px;
+			padding: 8px 15px;
+			background-color: dodgerblue;
+			color: deeppink;
+			border: none;
+			cursor: pointer;
+		}
+		.card button:hover{
+			background-color: mediumvioletred;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1> Sayyid Kamolxon </h1> 
+	<nav>
+		<a href="#"> Bosh sahifa </a>
+		<a href="#"> Men haqimda </a>
+		<a href="#"> Aloqa </a>
+	</nav>
+	</header>
+	<section class="box">
+		<p>Web dasturlash bo'yicha mutaxassis</p>
+	<img src="Kamolxon.jpg" alt="rasm">
+	<br> <br>
+	<button onclick="info()"> Ko'proq bilish</button>
+	<p id="natija"></p>
+	<script>
+		function info() {
+			document.getElementById("natija").innerHTML="Men Navoiy viloyati,Navoiy shahrida joylashgan 11-AFChO'I Maktabining informatika fani o'qituvchisiman."
+		}
+	</script>
+	<button onclick="Yashir()"> Tozalash</button>
+	<script>
+		function Yashir(){
+			document.getElementById("natija").innerHTML="";
+		}
+	</script>
+	</section>
+	<section class="cards">
+		<div class="card">
+			<h3> Web dasturlash</h3>
+			<p> HTML,CSS,JavaScript o'rganmoqdaman</p>
+			<button>Ko'rish</button>
+		</div>
+		<div class="card">
+			<h3> Python va C++</h3>
+			<p> Python va C++ o'rganmoqdaman</p>
+			<button>Ko'rish</button>
+		</div>
+	</section>
+	<footer>
+		2026 Kamolxon
+	</footer>
+</body>
+</html>
